@@ -1,0 +1,110 @@
+# -----------------------------------------------------------------
+# .gitignore
+# my default .gitignore file
+# borrows heavily from https://salferrarello.com/starter-gitignore-file/
+# and https://github.com/StackUp-Digital/Artemis-11ty-Starter/blob/master/.gitignore
+# and https://github.com/github/gitignore/blob/main/Python.gitignore
+# 
+
+# ignore static site stuff - 11ty edition
+_site/
+node_modules/
+
+# ignore OS generated files
+ehthumbs.db
+Thumbs.db
+.DS_Store
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+.nova/
+
+# ignore log files and databases
+*.log
+logs
+*.log
+npm-debug.log*
+pip-log.txt
+pip-delete-this-directory.txt
+*.sql
+*.sqlite
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ignore private/secret files
+*.der
+*.key
+*.pem
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# --------------------------------------------------------
+# BEGIN Explictly Allowed Files (i.e. do NOT ignore these)
+# --------------------------------------------------------
+# track these files, if they exist
+!.editorconfig
+!.env.example
+!.git-blame-ignore-revs
+!.gitignore
+!.nvmrc
+!.phpcs.xml.dist
+
+# https://stackoverflow.com/questions/44206782/do-i-commit-the-package-lock-json-file-created-by-npm-5
+!package-lock.json
