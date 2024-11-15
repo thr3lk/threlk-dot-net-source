@@ -4,16 +4,29 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{title}}</title>
+		body{
+			max-width: 80vw;
+			margin: 0 auto;
+			font-size: .85em;
+		}
+		
+		ul.navigation{margin-bottom: 1em;}
+		
+		main{margin-top: 2em;}
+	</style>
 </head>
 <body>
-	<ul>
+	<header>
+	<ul class="navigation">
 	{% for navItem in collections.all | eleventyNavigation %}
-		<li>
-		<a href="{{navItem.url}}">{{navItem.url}}</a> {% if navItem.url == page.url %} ← {% endif %}
+		{% if not navItem.data.eleventyNavigation.hide %}
+		<li class="navigation--item{% if navItem.url == page.url %} navigation--item__current{% endif %}">
+		<a href="{{navItem.url}}">{% if navItem.data.title %}{{navItem.data.title}}{% else %}{{navItem.url}}{% endif %}</a> {% if navItem.url == page.url %} ← {% endif %}
 		</li>
+		{% endif %}
 	{% endfor %}
 	</ul>
-
+	</header>
 	{{ content }}
 </body>
 </html>

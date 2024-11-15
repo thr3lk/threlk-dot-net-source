@@ -1,0 +1,14 @@
+---
+layout: main.liquid
+---
+
+<article class="{{type}}">
+<header>
+<h1>{{title}}</h1>
+originally published: 
+{{date | readableDate: "LLLL d yyyy" }} <a href="{{url}}">#</a>
+</header>
+<main>
+{{content}}
+</main>
+</article>

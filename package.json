@@ -14,7 +14,10 @@
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
 	},
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "justin threlkeld",
+	"url": "http://threlk.net/"
+  },
   "license": "ISC",
   "type": "module",
   "devDependencies": {
