@@ -1,0 +1,20 @@
+{
+	"socials": [
+		{
+			"name": "Bluesky",
+			"baseurl": "https://bsky.app/profile/",
+			"handle": "justin.thrlkld.me",
+			"accentcolor": ""
+		},
+		{
+			"name": "Mastodon",
+			"baseurl": "https://kolektiva.social/",
+			"handle": "@_justin@kolektiva.social"
+		},
+		{
+			"name": "Pixelfed",
+			"baseurl": "https://pixelfed.social/",
+			"handle": "@itsjustin"
+		}
+	]
+}
