@@ -1,0 +1,15 @@
+<ul class="socials">
+{% for location in socials %}
+	<li class="social social--{{ location.name | slugify}}"><a href="{{ location.baseurl}}{{ location.handle}}" rel="me"><img src="/icons/{{ location.name }}.svg" alt="{{ location.name }} logo" width="20"><span class="social--site">{{ location.name }}</span>: <span class="social--handle"></span>{{ location.handle}}</a></li>
+{% endfor %}
+</ul>
+
+
+<style>
+	ul.socials{
+	}
+
+	{% for site in socials %}
+		{% if site.accentcolor %}li.social--{{site.name | slugify}} { background-color: {{site.accentcolor}} }{% endif %}
+	{% endfor %}
+</style>
