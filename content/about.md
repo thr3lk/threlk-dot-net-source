@@ -3,6 +3,7 @@ layout: main.liquid
 title: about
 eleventyNavigation:
   parent: / 
+  order: 2
 ---
 
 # about me
