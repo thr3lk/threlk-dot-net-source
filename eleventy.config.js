@@ -65,6 +65,18 @@ export default async function(eleventyConfig) {
 		}
 	});
 
+	// eleventyConfig.addGlobalData("permalink", () => {
+	// 	return (data) =>
+	// 		`${data.page.filePathStem}.${data.page.outputFileExtension}`;
+	// });
+
+	// // Remove .html from `page.url` entries
+	// eleventyConfig.addUrlTransform((page) => {
+	// 	if (page.url.endsWith(".html")) {
+	// 		return page.url.slice(0, -1 * ".html".length);
+	// 	}
+	// });
+
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
 

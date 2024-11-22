@@ -6,7 +6,7 @@ layout: main.liquid
 <header>
 <h1>{{title}}</h1>
 originally published: 
-{{date | readableDate: "LLLL d yyyy" }} <a href="{{url}}">#</a>
+<time datetime="{{published}}">{{published | readableDate: "LLLL d yyyy" }}</time> <a href="{{url}}" title="direct link">#</a>
 </header>
 <main>
 {{content}}
