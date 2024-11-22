@@ -45,15 +45,23 @@
 <body>
 	<header>
 	<ul class="navigation">
-	{% for navItem in collections.all | eleventyNavigation %}
-		{% if not navItem.data.eleventyNavigation.hide %}
-		<li class="navigation--item{% if navItem.url == page.url %} navigation--item__current{% endif %}">
-		<a href="{{navItem.url}}">{% if navItem.data.title %}{{navItem.data.title}}{% else %}{{navItem.url}}{% endif %}</a> {% if navItem.url == page.url %} ← {% endif %}
+	{% assign navPages = collections.all | eleventyNavigation %}
+	{{navPages | json}}
+	{%- for entry in navPages %}
+	{% comment %} {% for entry in collections.all | eleventyNavigation  %} {% endcomment %}
+		{% if not entry.hide %}
+		<li class="navigation--item{% if entry.url == page.url %} navigation--item__current{% endif %}">
+		<a href="{{entry.url}}">{% if entry.title %}{{entry.title}}{% else %}{{entry.url}}{% endif %}</a> {% if entry.url == page.url %} ← {% endif %}
 		</li>
+		{{entry | json}}
 		{% endif %}
-	{% endfor %}
+
+	{%- endfor %}
 	</ul>
+
 	</header>
+
+	{{title}}
 	{{ content }}
 
 	{% render "under-construction.liquid" %}

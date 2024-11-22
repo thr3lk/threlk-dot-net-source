@@ -1,8 +1,7 @@
 ---
 layout: main.liquid
-title: about
 eleventyNavigation:
-  parent: / 
+  key: about
   order: 2
 ---
 
