@@ -62,7 +62,7 @@
 	
 	{% if og.image %}<meta property="og:image" content="{{og.image}}">{% endif %}
 	
-	<meta property="og:description" content="{% if og.description %}{{og.description}}{% elsif description %}{{description}}{% else %}{{content | truncate: 400}}{% endif %}">
+	<meta property="og:description" content="{% if og.description | escape %}{{og.description}}{% elsif description %}{{description | escape}}{% else %}{{content | truncate: 400 | escape}}{% endif %}">
 
 	{% comment %} for posts {% endcomment %}
 	{% if published %}<meta property="og:article:published_time" content={{published | json}}>{% endif  %}
