@@ -61,7 +61,8 @@
 	<meta property="og:url" content="{{metadata.url}}{{page.url}}">
 	
 	{% if og.image %}<meta property="og:image" content="{{og.image}}">{% endif %}
-	{% if og.description %}<meta property="og:description" content="{{og.description}}">{% endif %}
+	
+	<meta property="og:description" content="{% if og.description %}{{og.description}}{% elsif description %}{{description}}{% else %}{{content | truncate: 400}}{% endif %}">
 
 	{% comment %} for posts {% endcomment %}
 	{% if published %}<meta property="og:article:published_time" content={{published | json}}>{% endif  %}
@@ -81,8 +82,6 @@
 	<meta property="book:tag" content=""> 
 	{% endcomment %}
 	
-	
-
 </head>
 <body>
 	<header>
@@ -99,7 +98,6 @@
 	</ul>
 
 	</header>
-
 	{{ content }}
 
 	{% render "under-construction.liquid" %}

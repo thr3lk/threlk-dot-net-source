@@ -7,10 +7,11 @@ export default {
 		hide: true
 	},
 	og: {
-		type: "article"
+		type: "article",
 	},
 	layout: "post.liquid",
 	permalink: function ({ title, published }) {
 		return `/${this.readableDate(published, "yyyy-MM-dd")}/${this.slugify(title)}/index.html`;
 	},
+	
 };
