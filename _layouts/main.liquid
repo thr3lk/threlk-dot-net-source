@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{title}}</title>
+	<title>{% if title %}{{title}}{% elsif eleventyNavigation.key %}{{eleventyNavigation.key}} on {{metadata.title}}{% else %}{{metadata.title}}{% endif %}</title>
 	{% comment %} <link rel="preload" href="/fonts/IBMPlexMono-Text.woff2" as="font" type="font/woff2" crossorigin> {% endcomment %}
 	<style>
 		/* header ul.navigation{display: inline; display: inline;} */
@@ -48,7 +48,41 @@
 		}
 		
 		main{margin-top: 2em;}
+
 	</style>
+	{% comment %} for the top level {% endcomment %}
+	<meta property="og:site_name" content="{{metadata.title}}">
+	<meta property="og:locale" content="en_US">
+
+	{% comment %} for pages {% endcomment %}
+	<meta property="og:title" content="{% if title %}{{title}}{% elsif eleventyNavigation.key %}{{eleventyNavigation.key}} on {{metadata.title}}{% else %}{{metadata.title}}{% endif %}">
+
+	{% if og.type %}<meta property="og:type" content="{{og.type}}">{% endif %}
+	<meta property="og:url" content="{{metadata.url}}{{page.url}}">
+	
+	{% if og.image %}<meta property="og:image" content="{{og.image}}">{% endif %}
+	{% if og.description %}<meta property="og:description" content="{{og.description}}">{% endif %}
+
+	{% comment %} for posts {% endcomment %}
+	{% if published %}<meta property="og:article:published_time" content={{published | json}}>{% endif  %}
+	{% if updated %}<meta property="og:article:modified_time" content="{{updated}}">{% endif %}
+	<meta property="og:article:author" content="{% if author %}{{author}}{% else %}{{metadata.author.name}}{% endif %}">
+		
+	{% comment %} 
+	<meta property="og:article:section" content="">
+	<meta property="og:article:tag" content=""> 
+	{% endcomment %}
+
+	{% comment %} for books {% endcomment %}
+	{% comment %} 
+	<meta property="book:author" content="">
+	<meta property="book:isbn" content="">
+	<meta property="book:release_date" content="">
+	<meta property="book:tag" content=""> 
+	{% endcomment %}
+	
+	
+
 </head>
 <body>
 	<header>
