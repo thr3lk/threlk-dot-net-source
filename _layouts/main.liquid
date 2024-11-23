@@ -98,8 +98,10 @@
 	</ul>
 
 	</header>
+	
 	{{ content }}
 
 	{% render "under-construction.liquid" %}
+{% if og.description %}{{og.description | escape}}{% elsif description %}{{description | escape}}{% else %}{{content | truncate: 400 | strip_html | escape}}{% endif %}
 </body>
 </html>
