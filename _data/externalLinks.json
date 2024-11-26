@@ -15,6 +15,11 @@
 			"name": "Pixelfed",
 			"baseurl": "https://pixelfed.social/",
 			"handle": "@itsjustin"
+		},
+		{
+			"name": "Letterboxd",
+			"baseurl": "https://letterboxd.com/",
+			"handle": "threlk"
 		}
 	]
 }
