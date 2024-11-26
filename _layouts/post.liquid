@@ -6,9 +6,10 @@ layout: main.liquid
 <header>
 <h1>{{title}}</h1>
 originally published: 
-<time datetime="{{published}}">{{published | readableDate: "LLLL d yyyy" }}</time> <a href="{{url}}" title="direct link">#</a>
+<time class="dt-published" datetime="{{published}}">{{published | readableDate: "LLLL d yyyy" }}</time> <a href="{{url}}" class="u-url" rel title="direct link">#</a>
+<div>by <a href="{{ "/about" | url }}" rel="author" class="p-name">justin</a></div>
 </header>
-<main>
+<main class="e-content">
 {{content}}
 </main>
 </article>
