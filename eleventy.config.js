@@ -10,11 +10,20 @@ import { parse } from "csv-parse";
 export default async function (eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
 	//
-	eleventyConfig.addDataExtension("csv", (contents) => {
+	eleventyConfig.addDataExtension("tsv", (contents) => {
 		const records = parse(contents, {
 			columns: true,
 			skip_empty_lines: true,
 			delimiter: ["\t", "=>"],
+		});
+		return records._readableState.buffer;
+	});
+
+	eleventyConfig.addDataExtension("csv", (contents) => {
+		const records = parse(contents, {
+			columns: true,
+			skip_empty_lines: true,
+			delimiter: ",",
 		});
 		return records._readableState.buffer;
 	});
