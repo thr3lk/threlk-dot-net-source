@@ -17,6 +17,8 @@ refer to [11ty/eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) f
 - [ ] add OpenGraph stuff, as one does
 - [ ] fix style stuff
 
+### ideas
+
 
 
 ==under construction, pardon the dust==
