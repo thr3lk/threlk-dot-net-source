@@ -1,0 +1,32 @@
+---
+layout: main.liquid
+---
+
+<article class="{{type}}">
+<header>
+<div class="meta">
+<h1>{{title}}</h1>
+<div>{{subtitle}}</div>
+{%if olib %}
+<span><a href="https://openlibrary.org/works/{{olib}}">olib record</a></span>
+{% endif %}
+<div>published: {{pubdate | readableDate: "yyyy"}}</div>
+{%if author[1] %}
+authors:
+<ul>
+{% for author in author %}
+<li>{{author}}</li>
+{% endfor %}
+</ul>
+{% else %}
+author: {{author}}
+{% endif %}
+</div>
+<div class="cover">
+<img src="{{cover}}">
+</div>
+</header>
+<main class="e-content">
+{{content}}
+</main>
+</article>

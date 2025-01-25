@@ -1,0 +1,11 @@
+---
+layout: main.liquid
+title: books
+eleventyNavigation:
+  key: books
+  order: 3
+---
+
+<h1>{{title}}</h1>
+
+{% render "books-list.liquid", shelf: collections.books %}

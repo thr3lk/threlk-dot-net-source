@@ -1,10 +1,8 @@
 export default {
-	tags: [
-		"words"
-	],
-	eleventyNavigation:{
+	tags: ["words"],
+	eleventyNavigation: {
 		parent: "words",
-		hide: true
+		hide: true,
 	},
 	og: {
 		type: "article",
@@ -13,5 +11,4 @@ export default {
 	permalink: function ({ title, published }) {
 		return `/${this.readableDate(published, "yyyy-MM-dd")}/${this.slugify(title)}/index.html`;
 	},
-	
 };

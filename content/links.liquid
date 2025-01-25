@@ -1,0 +1,21 @@
+---
+layout: main.liquid
+title: links
+eleventyNavigation:
+  key: links
+  order: 3
+---
+
+<h1>{{title}}</h1>
+<p>links I've gathered from across the internet that I think are cool, interesting, or useful.</p>
+
+<ul>
+{% for link in links %}
+<li>
+	<a class="external" href="{{link.url}}">{% if link["display name"]!="" %}{{link["display name"]}}{% else %}{{link.url}}{% endif %}</a>{% if link.comment!="" %}: {{link.comment}} {% endif %}
+</li>
+{% endfor %}
+
+</ul>
+
+<p>this list is incomplete and growing by the day</p>

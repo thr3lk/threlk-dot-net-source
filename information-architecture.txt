@@ -1,0 +1,13 @@
+information architecture
+
+
+home
+about
+words
+library
+    books | title, released, comment, url, status, reads, cover
+    links | url, display name, comment
+    # @todo add these items to library:
+        # films | title, released, comment, url, status, reads
+        # games | title, released, comment, url, status, reads
+        # shows | title, released, seasons, comment, url, status, reads

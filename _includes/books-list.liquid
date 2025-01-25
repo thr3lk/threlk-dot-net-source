@@ -1,0 +1,17 @@
+{% if shelf %}
+{% for book in shelf %}
+<ul>
+	<li class="book--grid">
+		<a href="{{book.url}}" class="book--grid__inner">
+			<img src="{{book.data.cover}}" width="150"/>
+			<div>
+				{{book.data.title}}
+			({{book.data.pubdate | readableDate: "yyyy"}})
+			</div>
+		</a>
+	</li>
+</ul>
+{% endfor %}
+{% else %}
+no books
+{% endif %}

@@ -27,16 +27,16 @@
 		font-family: IBM-Plex-Mono;
 		src: url('/fonts/IBMPlexMono-BoldItalic.woff2') format('woff2');
 		font-weight: bold;
-		font-style: italic; 
+		font-style: italic;
 		}
-		
+
 		body{
 			max-width: 80vw;
 			margin: 0 auto;
 			font-family: IBM-Plex-Mono;
 			font-size: .85em;
 		}
-		
+
 		ul.navigation{margin-bottom: 1em;}
 
 		.callout{
@@ -46,8 +46,48 @@
 			padding: .5em .75em;
 			margin: 0 -0.5em;
 		}
-		
+
 		main{margin-top: 2em;}
+
+		.book--grid{
+			width: 12em;
+			/* border: 1px dashed black; */
+			display: inline-block;
+			text-align: center;
+			list-style-type: none;
+			margin: .5em;
+			padding: .5em;
+			border-radius: .5em;
+		}
+		.book--grid:hover{background-color: #eaeaea;}
+		.book--grid img{
+			border-top: .15em solid rgba(0,0,0,0);
+			border-left: .15em solid rgba(0,0,0,0);
+			border-bottom: .35em solid rgba(0,0,0,0);
+			border-right: .35em solid rgba(0,0,0,0);
+			width: 95%;
+		}
+		.book--grid:hover img{
+			border-color: rgba(0,0,0,0.5);
+		}
+
+		.book--grid__inner{
+		}
+
+		article.book{
+		}
+
+		article.book header{
+			display: flex;
+		}
+		article.book header .meta{
+			order: 2;
+		}
+		article.book header .cover{
+		}
+		article.book .cover img{
+			width: 15em;
+			padding-right: 1em;}
 
 	</style>
 	{% comment %} for the top level {% endcomment %}
@@ -59,29 +99,29 @@
 
 	{% if og.type %}<meta property="og:type" content="{{og.type}}">{% endif %}
 	<meta property="og:url" content="{{metadata.url}}{{page.url}}">
-	
+
 	{% if og.image %}<meta property="og:image" content="{{og.image}}">{% endif %}
-	
+
 	<meta property="og:description" content="{% if og.description %}{{og.description | escape}}{% elsif description %}{{description | escape}}{% else %}{{content | truncate: 400 | strip_html | escape}}{% endif %}">
 
 	{% comment %} for posts {% endcomment %}
 	{% if published %}<meta property="og:article:published_time" content={{published | json}}>{% endif  %}
 	{% if updated %}<meta property="og:article:modified_time" content="{{updated}}">{% endif %}
 	<meta property="og:article:author" content="{% if author %}{{author}}{% else %}{{metadata.author.name}}{% endif %}">
-		
-	{% comment %} 
+
+	{% comment %}
 	<meta property="og:article:section" content="">
-	<meta property="og:article:tag" content=""> 
+	<meta property="og:article:tag" content="">
 	{% endcomment %}
 
 	{% comment %} for books {% endcomment %}
-	{% comment %} 
+	{% comment %}
 	<meta property="book:author" content="">
 	<meta property="book:isbn" content="">
 	<meta property="book:release_date" content="">
-	<meta property="book:tag" content=""> 
+	<meta property="book:tag" content="">
 	{% endcomment %}
-	
+
 </head>
 <body>
 	<header>
@@ -98,7 +138,7 @@
 	</ul>
 
 	</header>
-	
+
 	{{ content }}
 
 	{% render "under-construction.liquid" %}

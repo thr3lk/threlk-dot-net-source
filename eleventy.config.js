@@ -4,11 +4,23 @@ import pluginNavigation from "@11ty/eleventy-navigation";
 
 import pluginFilters from "./_config/filters.js";
 
+import { parse } from "csv-parse";
+
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-export default async function(eleventyConfig) {
+export default async function (eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
+	//
+	eleventyConfig.addDataExtension("csv", (contents) => {
+		const records = parse(contents, {
+			columns: true,
+			skip_empty_lines: true,
+			delimiter: ["\t", "=>"],
+		});
+		return records._readableState.buffer;
+	});
+
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
 	});
@@ -17,7 +29,7 @@ export default async function(eleventyConfig) {
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig
 		.addPassthroughCopy({
-			"./public/": "/"
+			"./public/": "/",
 		})
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
@@ -47,8 +59,8 @@ export default async function(eleventyConfig) {
 		templateData: {
 			eleventyNavigation: {
 				key: "Feed",
-				order: 4
-			}
+				order: 4,
+			},
 		},
 		collection: {
 			name: "words",
@@ -60,9 +72,9 @@ export default async function(eleventyConfig) {
 			subtitle: "This is a longer description about your blog.",
 			base: "http://www.threlk.net/",
 			author: {
-				name: "justin"
-			}
-		}
+				name: "justin",
+			},
+		},
 	});
 
 	// eleventyConfig.addGlobalData("permalink", () => {
@@ -87,9 +99,9 @@ export default async function(eleventyConfig) {
 	});
 
 	eleventyConfig.addShortcode("currentBuildDate", () => {
-		return (new Date()).toISOString();
+		return new Date().toISOString();
 	});
-};
+}
 
 export const config = {
 	// Control which files Eleventy will process
@@ -100,17 +112,16 @@ export const config = {
 		"liquid",
 		// "11ty.js",
 	],
-	
+
 	markdownTemplateEngine: "liquid",
 	htmlTemplateEngine: "liquid",
 
 	// These are all optional:
 	dir: {
-		input: "content",          // default: "."
-		includes: "../_includes",  // default: "_includes" (`input` relative)
+		input: "content", // default: "."
+		includes: "../_includes", // default: "_includes" (`input` relative)
 		layouts: "../_layouts",
-		data: "../_data",          // default: "_data" (`input` relative)
+		data: "../_data", // default: "_data" (`input` relative)
 		output: "_site",
 	},
-
 };
