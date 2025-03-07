@@ -236,11 +236,30 @@ article.guide pre code:hover {
 	/* background-color: #636f88; */
 }
 
-article.guide pre code:hover::before {
+/* article.guide pre code:hover::before {
 	content: "[copy]";
 	display: block;
-	/* width: 1em; */
-	/* height: 1em; */
 	float: right;
 	font-size: 0.85em;
+} */
+
+table {
+	border-collapse: collapse;
+}
+
+table thead {
+	background: #2e3440;
+	color: white;
+}
+
+table tr {
+}
+
+table td,
+table th {
+	padding: 0.4em 0.8em;
+}
+
+table tr:nth-child(even) {
+	background-color: aliceblue;
 }
