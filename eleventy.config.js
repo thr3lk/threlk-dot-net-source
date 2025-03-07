@@ -1,6 +1,7 @@
 import { IdAttributePlugin, HtmlBasePlugin } from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginNavigation from "@11ty/eleventy-navigation";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 import pluginFilters from "./_config/filters.js";
 
@@ -10,6 +11,8 @@ import { parse } from "csv-parse";
 export default async function (eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
 	//
+	eleventyConfig.addPlugin(syntaxHighlight);
+
 	eleventyConfig.addDataExtension("tsv", (contents) => {
 		const records = parse(contents, {
 			columns: true,
