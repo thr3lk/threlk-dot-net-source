@@ -9,7 +9,7 @@ export default {
 	},
 	layout: "book.liquid",
 	permalink: function ({ title }) {
-		return `/${this.slugify(title)}/index.html`;
+		return `${this.slugify(title)}/index.html`;
 	},
 	// image: function ({ title, author, pubyear }) {
 	// 	return `/${this.readableDate(published, "yyyy-MM-dd")}/${this.slugify(title)}/index.html`;
