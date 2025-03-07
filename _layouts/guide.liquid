@@ -1,0 +1,25 @@
+---
+layout: main.liquid
+---
+
+<article class="{{type}}">
+<header>
+<h1>{{title}}</h1>
+originally published:
+<span>by <a href="{{ "/about" | url }}" rel="author" class="p-name">justin</a></span>
+<time class="dt-published" datetime="{{published}}">{{published | readableDate: "LLLL d yyyy" }}</time> <a href="{{url}}" class="u-url" rel title="direct link">#</a>
+{%if revised %}
+<small class="revisions">
+revised:
+<ul class="revision">{% for revision in revised %}
+<li>
+	<time class="dt-published" datetime="{{ revision.date}}">{{ revision.date | readableDate: "LLLL d yyyy" }}</time>: {{revision.comment}}</li>
+{% endfor %}
+</ul>
+</small>
+{% endif %}
+</header>
+<main class="e-content">
+{{content}}
+</main>
+</article>
