@@ -1,6 +1,7 @@
 import { IdAttributePlugin, HtmlBasePlugin } from "@11ty/eleventy";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginNavigation from "@11ty/eleventy-navigation";
+import toml from "@iarna/toml";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 import pluginFilters from "./_config/filters.js";
@@ -11,8 +12,18 @@ import { parse } from "csv-parse";
 export default async function (eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
 	//
+
+	// set up toml frontmatter
+	eleventyConfig.setFrontMatterParsingOptions({
+		engines: {
+			toml: toml.parse.bind(toml),
+		},
+	});
+
 	eleventyConfig.addPlugin(syntaxHighlight);
 
+	// handle TSV and CSV files in `/data`
+	// file contents become available as data objects under their filename
 	eleventyConfig.addDataExtension("tsv", (contents) => {
 		const records = parse(contents, {
 			columns: true,
