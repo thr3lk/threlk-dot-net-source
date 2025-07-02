@@ -14,14 +14,14 @@ But then last October the read-it-later service I'd been using shut down and I s
 
 It's been a fun and rewarding process, and I'm increasingly convinced these types of small-scale, seeming low-stakes, agency-increasing projects are in fact profoundly important to pushing back the encroaching _waving around_ fascism. A long time ago wrote a bunch of words that I would like to revisit and turn into a proper piece about how companies that make invest a lot in imagining the world as it could be (typically in ways that maximize profits), and those ideas, through the things they make, shape the world we do in fact live in, which in turn shapes the things we see as possible to do with the tools at our disposal (see, not _none_ theory).
 
-We can and should stretch our imaginations a bit and look past the world that Apple and Samsung and Google and Microsoft and all the others have built for us. We should try to build a something from our own imaginations. There are many ways this shows up, often under the enormous (and enormously cool tent) called "DIY".
+We can and should stretch our imaginations a bit and look past the world that Apple and Samsung and Google and Microsoft and all the others have built for us. We should try to build a something from our own imaginations. There are many ways this shows up, often under the enormous (and enormously cool) tent called "DIY".
 
-So anyway, for reasons mostly unrelated to DIY (games) I recently built a PC. I've got a whole a draft about it and one day I'll everyone make fun of my build. What matters for the framing of this piece is: it's running Linux. And that's where I'll start recounting my recent adventures.
+So anyway, for reasons mostly unrelated to DIY (games) I recently built a PC. I've got a whole a draft about it and one day I'll let everyone make fun of my build. What matters for the framing of this piece is: it's running Linux. And that's where I'll start recounting my recent adventures.
 
 ## Adventures in Linux
-I've been an Apple guy pretty much forever. I like to tinker and hack but I also like my phone being, at the end of the day, a phone. And no, I don't want an antivirus for my phone (don't worry I'm getting to the PC part), I only kinda want apps for my phone. I also like privacy and security while also being lazy, so I've made quite a home inside the Apple Walled Garden and that is unlikely to change. That being said, I have always believed in the core ideas behind Linux. I also hate every new version of Windows more than the last.
+I've been an Apple guy pretty much forever. I like to tinker and hack but I also like my phone being, at the end of the day, a phone. I don't want an antivirus for my phone (don't worry I'm getting to the PC part), I only kinda want apps for my phone. I also like privacy and security while also being lazy, so I've made quite a home inside the Apple Walled Garden and that is unlikely to change. That being said, I have always believed in the core ideas behind Linux. I also hate every new version of Windows more than the last.
 
-When it was time to choose an OS for this gaming PC, Linux was the fairly obvious answer. Until somewhat recently this probably would have been terrible idea for a gaming PC with an NVIDIA card. Steam has done a lot of work on that front and the team over at System 76 has their own Ubuntu based <abbr title="distribution, a type of Linux. Sometimes also called &ldquo;flavors&rdquo;">disto</abbr>.
+When it was time to choose an OS for this gaming PC, Linux was the fairly obvious answer. Until somewhat recently this probably would have been terrible idea for a gaming PC with an NVIDIA card. Steam has done a lot of work on that front and the team over at System 76 has their own Ubuntu based <abbr title="distribution, a type of Linux that makes it even better. Sometimes also called &ldquo;flavors&rdquo;">disto</abbr>.
 
 If you're not already a Linux user, just taking one small step out of whichever ecosystem you're used to opens up a number of really useful horizons for even more ownership of your tools.
 
@@ -146,7 +146,7 @@ These are the sorts of ideas on my mind lately, small knowledge projects and DIY
 
 
 
-[^1]: likely the product of being a eldest child with an independent streak raised in a somewhat actually-honest-to-god libertarian current. [[Growing up in the valley]] has more about that.
+[^1]: likely the product of being a eldest child with an independent streak raised in a somewhat actually-honest-to-god libertarian current. [Growing up in the valley](https://buttondown.com/FutureResearch/archive/growing-up-in-the-valley/) has more about that.
 
 [^2]: well mostly... turns out this is pretty hard to after a couple of decades of using the same email address
 
@@ -156,7 +156,7 @@ These are the sorts of ideas on my mind lately, small knowledge projects and DIY
 
 [^darkforest]: As an aside: I keep returning to Erin Kissane’s writing, especially her piece [Against the Dark Forest](https://www.wrecka.ge/against-the-dark-forest/). Her thoughts on community, both online and off, echo a great many of my own.
 
-[^timemachine]: a guess I’ve already started this collection with my piece about setting up time machine backups to a netatalk host (add link)
+[^timemachine]: a guess I’ve already started this collection with my piece about setting up time machine backups to a netatalk host [Linux as Time Machine backup server for MacOS systems](/2025-03-06/linux-as-time-machine-backup-server-for-macos-systems/)
 
 [^youwouldntdownload]: ~~if~~ since, _like me_, you are an upstanding citizen and prefer not to sail the high seas, it’s I usefully to note that the collection of DVDs you got from Goodwill makes an excellant catalog for your personal Netflix alternative. The YAMS stack will still set you up with a good base, just disable the Docker containers you’re not planning to use after install.
 
