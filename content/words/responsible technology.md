@@ -3,6 +3,7 @@ title: Adventures in Responsible Technology
 tags: posts
 type: essay
 published: 2025-07-01
+date: 2025-07-01
 ---
 
 The I've grown increasingly distrustful of Technology Inc™ over the years. Not that I've ever been terribly trusting of cooperate interests, but that impulse[^1] has only sharpened with time.

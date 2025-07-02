@@ -4,6 +4,7 @@ tags: posts
 type: guide
 # layout: guide
 published: 2025-03-06
+date: 2024-11-22
 ---
 ## Two paths: Samba and Netatalk
 **Samba** is faster at data transfer, but flakey with powernap and background tasks — backups will probably fail while your MacOS systems are asleep, but it’s what I started with and it will back up faster when it works. (an update with these details coming soon-ish)

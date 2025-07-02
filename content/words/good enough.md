@@ -3,6 +3,7 @@ title: Good enough
 tags: posts
 type: essay
 published: 2024-11-22
+date: 2024-11-22
 ---
 
 Hello, I’ve rebooted my website. Finally. After years of overthinking I said “fuck it let’s hack something together and see if it’s good enough” and you know what I think it actually might be.
@@ -15,9 +16,9 @@ I detest the phrase “perfect is the enemy of good”. There’s a good sentime
 
 Anyway, I’ve been thinking about an alternative aphorism: “good enough is best”.
 
-See, I’ve been reflecting something: on how a drive for finding “the best” not only makes us miserable (though, to be clear, I have absolutely no interest in another screed against the rat race or materialism or consumerism or whatever, as much as I might agree that those forces are _terrible_ for us), but also traps us into a cycle of scarcity — both imagined and actual. 
+See, I’ve been reflecting something: on how a drive for finding “the best” not only makes us miserable (though, to be clear, I have absolutely no interest in another screed against the rat race or materialism or consumerism or whatever, as much as I might agree that those forces are _terrible_ for us), but also traps us into a cycle of scarcity — both imagined and actual.
 
-<p class="callout">A quick disclaimer: I will never advocate for tolerating bullshit, or accepting garbage, or “being content with what you have”. Discontent is a signal, listen to it. I think we should always try to understand what’s driving your discontent (not all discontent requires the same response), but we should never ignore it. 
+<p class="callout">A quick disclaimer: I will never advocate for tolerating bullshit, or accepting garbage, or “being content with what you have”. Discontent is a signal, listen to it. I think we should always try to understand what’s driving your discontent (not all discontent requires the same response), but we should never ignore it.
 </p>
 
 With that out of the way, some thoughts on the importance of centering a sense of “good enough”.
@@ -27,7 +28,7 @@ First of all “good enough” is deeply personal in a community sense. It depen
 
 But why is ”good enough” so important? Because it pushes back against the centralization and standardization that is a large factor in creating our current landscape of scarcity. We want to watch the best movies, read the best books, drink the best coffee, see the best shows, use the best tools. We want our projects to be “the best” — not the best they can be, which would in fact be “good enough”, but “the best”, worthy of inclusion on lists of the best whatever as defined by... whoever makes those lists.
 
-This bias towards “the best” does a couple of things: 
+This bias towards “the best” does a couple of things:
 
 It puts the lists writers, taste makers, influencers, into positions of power over our own individual and community tastes. As with most things concerning power, this is a bit nuanced, but I don’t want to unpack all that right now.
 
