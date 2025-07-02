@@ -3,7 +3,7 @@
 		{
 			"name": "Bluesky",
 			"baseurl": "https://bsky.app/profile/",
-			"handle": "justin.thrlkld.me",
+			"handle": "threlk.net",
 			"accentcolor": ""
 		},
 		{
@@ -20,6 +20,11 @@
 			"name": "Letterboxd",
 			"baseurl": "https://letterboxd.com/",
 			"handle": "threlk"
+		},
+		{
+			"name": "Github",
+			"baseurl": "https://github.com/",
+			"handle": "thr3lk"
 		}
 	]
 }
