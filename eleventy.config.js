@@ -4,6 +4,10 @@ import pluginNavigation from "@11ty/eleventy-navigation";
 import toml from "@iarna/toml";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
+import markdownIt from "markdown-it";
+
+import markdownItFootnote from "markdown-it-footnote";
+
 import pluginFilters from "./_config/filters.js";
 
 import { parse } from "csv-parse";
@@ -19,6 +23,16 @@ export default async function (eleventyConfig) {
 			toml: toml.parse.bind(toml),
 		},
 	});
+
+	let options = {
+		html: true,
+		breaks: true,
+		linkify: true,
+		typographer: true,
+	};
+
+	eleventyConfig.setLibrary("md", markdownIt(options));
+	eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItFootnote));
 
 	eleventyConfig.addPlugin(syntaxHighlight);
 
