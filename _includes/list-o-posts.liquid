@@ -1,7 +1,7 @@
 <h3>the posts:</h3>
 <ol>
 {% if postlist %}
-{% for post in postlist %}
+{% for post in postlist reversed %}
 <li>
 	{% comment %} <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time><a href="{{post.url}}">{{post.data.title}}</a> {% endcomment %}
 	{{post.data.published | readableDate: "LLLL d yyyy" }} <a href="{{post.url}}">{{post.data.title}}</a>
