@@ -2,9 +2,20 @@
 <ol>
 {% if postlist %}
 {% for post in postlist reversed %}
-<li>
+<li class="{{post.data.type}}">
 	{% comment %} <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time><a href="{{post.url}}">{{post.data.title}}</a> {% endcomment %}
-	{{post.data.published | readableDate: "LLLL d yyyy" }} <a href="{{post.url}}">{{post.data.title}}</a>
+
+
+	{{post.data.published | readableDate: "LLLL d yyyy" }}
+	{% if post.data.href %}
+	<a class="external" href="{{post.data.href}}">{{post.data.title}}</a> {% if post.data.externalpub %} <abbr title="external site">↗ <em>{% if post.data.externalpreposition %} {{ post.data.externalpreposition }} {% else %} on {% endif %}{{post.data.externalpub}}</em></abbr>{% endif %}
+	{% else %}
+	<a href="{{post.url}}">{{post.data.title}}</a>
+	{%  endif %}
+	{% if post.data.collaborators %}
+	with {{post.data.collaborators}}
+	{%  endif %}
+
 </li>
 {% endfor %}
 {% else %}
