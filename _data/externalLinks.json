@@ -2,29 +2,39 @@
 	"socials": [
 		{
 			"name": "Bluesky",
+			"icon": false,
+			"emoji": "🦋",
 			"baseurl": "https://bsky.app/profile/",
 			"handle": "threlk.net",
 			"accentcolor": ""
 		},
 		{
-			"name": "Mastodon",
-			"baseurl": "https://kolektiva.social/",
-			"handle": "@_justin@kolektiva.social"
-		},
-		{
-			"name": "Pixelfed",
-			"baseurl": "https://pixelfed.social/",
-			"handle": "@itsjustin"
-		},
-		{
 			"name": "Letterboxd",
+			"icon": false,
+			"emoji": "📼",
 			"baseurl": "https://letterboxd.com/",
 			"handle": "threlk"
 		},
 		{
 			"name": "Github",
+			"icon": false,
+			"emoji": "💾",
 			"baseurl": "https://github.com/",
 			"handle": "thr3lk"
+		},
+		{
+			"name": "LinkedIn",
+			"icon": false,
+			"emoji": "💼",
+			"baseurl": "https://linkedin.com/in/",
+			"handle": "justinthrelkeld"
+		},
+		{
+			"name": "Are.na",
+			"icon": false,
+			"emoji": "**",
+			"baseurl": "https://www.are.na/",
+			"handle": "threlk"
 		}
 	]
 }

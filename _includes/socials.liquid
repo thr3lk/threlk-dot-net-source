@@ -1,6 +1,6 @@
 <ul class="socials">
 {% for location in socials %}
-	<li class="social social--{{ location.name | slugify}}"><a href="{{ location.baseurl}}{{ location.handle}}" rel="me"><img src="/icons/{{ location.name | slugify }}.svg" alt="{{ location.name }} logo" width="20"><span class="social--site">{{ location.name }}</span>: <span class="social--handle"></span>{{ location.handle}}</a></li>
+	<li class="social social--{{ location.name | slugify}}"><a href="{{ location.baseurl}}{{ location.handle}}" rel="me">{% if location.icon %}<img src="/icons/{{ location.name | slugify }}.svg" alt="{{ location.name }} logo" width="20">{% endif %}{% if location.emoji %}<span class="social--emoji">{{location.emoji}}{%  endif %} <span class="social--site">{{ location.name }}</span>: <span class="social--handle"></span>{{ location.handle}}</a></li>
 {% endfor %}
 </ul>
 
