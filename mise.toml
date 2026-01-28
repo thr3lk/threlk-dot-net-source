@@ -1,0 +1,17 @@
+[tools]
+node = "latest"
+
+[tasks.install]
+alias = "i"
+description = "Install npm dependencies"
+run = "npm install"
+
+[tasks.start]
+alias = "s"
+description = "Start the development server"
+run = "npm run start"
+
+[tasks.build]
+description = "Build the project"
+alias = "b"
+run = "npm run build"
