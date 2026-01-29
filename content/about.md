@@ -18,7 +18,7 @@ Like most trail guides, I've got certain areas where I've build up a wealth of e
 
 When I'm not working in these areas, I am often still thinking about them. My hobbies include outdoor adventures, a wide variety of games mostly centered on the apocalyptic, self-hosting computer infrastructure. I am based in Denver, Colorado.
 
-For more about my professional life and availability (I am known to consult on projects), refer to LinkedIn or request a copy of my resume via one of the channels below. The same channels are available for discussions of tomfoolery and nonsense.
+For more about my professional life and availability (I am known to consult on projects), refer to <a href="https://linkedin.com/in/justinthrelkeld">LinkedIn</a> or request a copy of my resume via one of the channels below. The same channels are available for discussions of tomfoolery and nonsense.
 
 you can find me at
 {% render "socials.liquid", socials: externalLinks.socials %}

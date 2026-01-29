@@ -1,15 +1,15 @@
 export default {
-	tags: ["books"],
+	tags: ["library"],
 	eleventyNavigation: {
-		parent: "books",
-		hide: true,
+		parent: "library",
+		hide: false,
 	},
 	og: {
 		type: "article",
 	},
 	layout: "book.liquid",
 	permalink: function ({ title }) {
-		return `${this.slugify(title)}/index.html`;
+		return `library/${this.slugify(title)}/index.html`;
 	},
 	// image: function ({ title, author, pubyear }) {
 	// 	return `/${this.readableDate(published, "yyyy-MM-dd")}/${this.slugify(title)}/index.html`;
