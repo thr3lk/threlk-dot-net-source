@@ -2,10 +2,10 @@ export default {
 	title: "threlk net",
 	url: "https://www.threlk.net",
 	language: "en",
-	description: "yet another personal website",
+	description: "the personal website of justin threlkeld",
 	author: {
 		name: "justin",
 		email: "",
-		url: "https://www.threlk.net/about/"
-	}
-}
+		url: "https://www.threlk.net/about/",
+	},
+};
