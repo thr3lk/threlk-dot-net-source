@@ -1,8 +1,7 @@
 information architecture
 
 
-home
-about
+home + about
 words
 library
     books | title, released, comment, url, status, reads, cover
