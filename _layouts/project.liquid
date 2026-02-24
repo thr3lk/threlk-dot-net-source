@@ -1,0 +1,15 @@
+---
+layout: main.liquid
+---
+
+<article class="{{type}}">
+<header>
+<h1>{{title}}</h1>
+{% if where or when %}
+<p>{{where}}{% if where and when %}, {% endif %}{{when}}</p>
+{% endif %}
+</header>
+<main class="e-content">
+{{content}}
+</main>
+</article>
