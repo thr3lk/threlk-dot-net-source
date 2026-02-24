@@ -16,9 +16,9 @@ Like most trail guides, I've got certain areas where I've build up a wealth of e
 - Expert workflows: how do expert practitioners (whether office workers, construction crews, hospital staff, or otherwise) approach their work? How might these workflows be improved?
 - Incidents, crises, and disaster: how do systems fail and how does system scale impact failure modes? How do people respond to (and recover from) system failures? How can we mitigate or prepare for catastrophe?
 
-When I'm not working in these areas, I am often still thinking about them. My hobbies include outdoor adventures, a wide variety of games mostly centered on the apocalyptic, self-hosting computer infrastructure. I am based in Denver, Colorado.
+When I'm not working in these areas, I am often still thinking about them. My hobbies include outdoor adventures, a wide variety of games often centered on the apocalyptic, and various forms of DIY.
 
 For more about my professional life and availability (I am known to consult on projects), refer to <a href="https://linkedin.com/in/justinthrelkeld">LinkedIn</a> or request a copy of my resume via one of the channels below. The same channels are available for discussions of tomfoolery and nonsense.
 
-you can find me at
+You can find me around the internet at:
 {% render "socials.liquid", socials: externalLinks.socials %}
