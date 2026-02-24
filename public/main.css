@@ -1,7 +1,48 @@
 * {
+	--background: #fff;
+	--background-accent: #2e3440;
 	--bloo: #0074d9;
 	--yelo: #ffed6d;
+
 	--light-text: #aaa;
+	--dark-text: #111;
+	--bloo-text: var(--bloo);
+	--yelo-text: var(--yelo);
+
+	--text-onyelo: var(--dark-text);
+	--text-onbloo: #fff;
+	--text-onaccent: #fff;
+
+	--code-text--fontstack: IBM-Plex-Mono, monospace;
+
+	@media (prefers-color-scheme: dark) {
+		--background: #292934;
+		/*--bloo-text: color-mix(in srgb, var(--bloo), transparent 0%);*/
+		--bloo-text: hsl(from var(--bloo) h s calc(l + 8));
+		--yelo: #ffed6d;
+
+		--light-text: #aaa;
+		--dark-text: #fff;
+		--text-onyelo: var(--background);
+	}
+}
+
+:root ::selection {
+	background-color: var(--yelo);
+}
+
+@media (prefers-color-scheme: dark) {
+	a::selection {
+		color: hsl(from var(--bloo-text) h s calc(l - 15));
+	}
+	h1,
+	h2,
+	h3,
+	h4 {
+		&::selection {
+			color: hsl(from var(--bloo-text) h s calc(l - 15));
+		}
+	}
 }
 
 @keyframes skewww {
@@ -18,16 +59,6 @@
 		transform: skew(0deg, 0deg);
 	}*/
 }
-
-/*@property --hue--bloo {
-	syntax: "<angle>";
-	inherits: false;
-	initial-value: 208deg;
-}*/
-
-/* header ul.navigation{display: inline; display: inline;} */
-/* header ul.navigation li{display: inline-block; float: none; font-style: italic; margin-right: 2em;} */
-/* header ul.navigation li.navigation--item__current{font-weight: bold;} */
 
 @font-face {
 	font-family: IBM-Plex-Mono;
@@ -50,29 +81,33 @@
 	font-style: italic;
 }
 
+@font-face {
+	font-family: Young-Serif;
+	src: url("/fonts/YoungSerif-Regular.woff2") format("woff2");
+}
+
+:root {
+	background-color: var(--background);
+	color: var(--dark-text);
+	font-family: IBM-Plex-Mono, monospace;
+	font-size: 0.85em;
+	@media screen and (width >= 120em) {
+		/* 120em ≈ 1920px*/
+		font-size: 1em;
+	}
+}
+
 body {
 	width: 80vw;
-	max-width: 90em;
-	/*min-width:;*/
+	max-width: 60em;
 	margin: 0 auto;
-	font-family: IBM-Plex-Mono;
-	font-size: 0.85em;
 }
 
 a {
-	color: var(--bloo);
+	color: var(--bloo-text);
 }
 
 a:hover {
-	/*filter: hue-rotate(50deg);*/
-	/*color: color(from var(--yelo) hsl calc(h * 2) 100% 100% / 1);*/
-	/*color: hsl(calc(var(--hue--bloo) + 170deg) 100% 42.5%);*/
-	/*color: var(--yelo);*/
-	/*text-decoration: dashed;*/
-	/*letter-spacing: 0.03rem;*/
-	/*font-style: oblique;*/
-	/*display: inline-block;*/
-	/*transform: skew(-5deg, -5deg);*/
 	display: inline-block;
 	animation-name: skewww;
 	animation-iteration-count: infinite;
@@ -84,16 +119,35 @@ ul.navigation {
 	margin-bottom: 1em;
 }
 
+main {
+	margin-top: 2em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: Young-Serif, Georgia, "Times New Roman", Times, serif;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	color: var(--bloo-text);
+	+ p,
+	+ div {
+		margin-top: 0;
+	}
+}
+
+mark {
+	background-color: var(--yelo);
+	color: var(--text-onyelo);
+}
+
 .callout {
 	font-style: italic;
 	background: #eaeaea;
 	border-radius: 0.5em;
 	padding: 0.5em 0.75em;
 	margin: 0 -0.5em;
-}
-
-main {
-	margin-top: 2em;
 }
 
 .book--grid {
@@ -139,12 +193,12 @@ article.book .cover img {
 	padding-right: 1em;
 }
 
+/* code blocks */
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #f8f8f2;
 	background: none;
-	font-family:
-		"Fira Code", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+	font-family: var(--code-text--fontstack);
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -170,7 +224,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #2e3440;
+	background: var(--background-accent);
 }
 
 /* Inline code */
@@ -276,7 +330,7 @@ article.guide p code {
 	padding: 0 0.1em;
 	margin: 0 -0.1em 0 -0.2em;
 	display: inline;
-	background-color: #2e3440;
+	background-color: var(--background-accent);
 }
 
 article.guide pre + pre {
@@ -299,11 +353,12 @@ table {
 }
 
 table thead {
-	background: #2e3440;
+	background: var(--background-accent);
 	color: white;
 }
 
 table tr {
+	/**/
 }
 
 table td,
@@ -347,7 +402,15 @@ table tr:nth-child(even) {
 		border: .25em dashed #ff4; */
 	/* background-color: #ff7; */
 	background-color: var(--yelo);
+	color: var(--text-onyelo);
 	/* font-weight: bold; */
 	/* font-family: sans-serif; */
 	border-radius: 0.5em;
+}
+
+/* header ul.navigation{display: inline; display: inline;} */
+/* header ul.navigation li{display: inline-block; float: none; font-style: italic; margin-right: 2em;} */
+/* header ul.navigation li.navigation--item__current{font-weight: bold;} */
+
+.project--list {
 }
