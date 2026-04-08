@@ -1,2 +1,7 @@
-# hello, robot
-#
+# hello, robots and friendly spiders
+# begone foul daemons
+
+
+# don't look in here
+User-agent: *
+Disallow: /public/pdfs/
